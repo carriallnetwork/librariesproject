@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libraries</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .active {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+}
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        #logo {
+            width: 50px; /* Adjust the width as needed */
+            height: 50px; /* Adjust the height as needed */
+            object-fit: contain;
+        }
+
+        #buttons {
+            display: flex;
+        }
+
+        .pill-button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .main-section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        #image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            margin-left:20px;
+        }
+
+        #image-container img {
+            max-width: 70%;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        #text-container {
+            max-width: 600px;
+            text-align: left;
+           
+        }
+
+        .hometext{
+            font-size: 30px;
+            font-weight: bolder;
+        }
+
+        .desctext{
+            text-shadow: #550e0e;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="your-logo.png" alt="Logo" id="logo">
+        <div id="buttons">
+            <button class="pill-button">Guidelines</button>
+            <button class="pill-button "type="button" onclick="window.location.href='register.html'">Register/Login</button>
+            <button class="pill-button "type="button" onclick="window.location.href='submit.html'">Submit</button>
+        </div>
+    </header>
+
+    <div class="main-section">
+        <div id="image-container">
+            <img src="architecturedesign.jpg" alt="Main Image">
+            <div id="text-container">
+                <p class="hometext">Your Design, Their Future</p>
+                <p class="desctext">Join a historic mission to design 100<br> 
+                    community centers across Tamil Nadu!<br>  
+                    <br> 
+                    Compete to shape the future of your community<br>  
+                    through innovative design. Register now and<br>  
+                    leave a lasting legacy.</p>
+                <p>You have 20 hours left to submit your design</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add the rest of your content here -->
+
+    <script src="scroll.js"></script>
+
+</body>
+</html>

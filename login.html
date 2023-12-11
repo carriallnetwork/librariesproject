@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #ffff; /* Light yellow background for the body */
+        }
+
+        #login-container {
+            max-width: 300px;
+            margin: 0 auto;
+            background-color: #fdf3d3; /* White background for the container */
+            border: 2px solid #f39c12; /* Orange border */
+            padding: 20px;
+            border-radius: 10px; /* Add border-radius for rounded corners */
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+
+        #forgot-password {
+            text-decoration: underline;
+            cursor: pointer;
+            color: #007bff;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        #submit-button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="login-container">
+        <h2>Login</h2>
+        <form action="your_login_endpoint" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <p id="forgot-password">Forgot Password?</p>
+            <button type="submit" id="submit-button">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

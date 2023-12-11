@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Design</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #submit-design-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-family: Arial, sans-serif; /* Change the font type */
+        }
+
+        #designdescription, #interiorsuggestions, #additionalComments {
+            resize: none; /* Disable textarea resizing */
+            rows: 10; /* Set the number of visible text lines */
+        }
+
+        .oval-button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        #submit-button {
+            background-color: #007bff;
+            color: #fff;
+            border: 50px;
+            margin-top: 15px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .file-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+
+        .wordlimit {
+            font-size: 12px;
+            text-align: right;
+        }
+
+        .word-count {
+            font-size: 12px;
+            display: inline-block;
+            margin-left: 5px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+    <div id="submit-design-container">
+        <h2>Submit Your Design</h2>
+        <form action="your_submission_endpoint" method="post">
+           
+            <p class="wordlimit">max: 300 words<span id="designdescription-word-count" class="word-count"></span></p>
+            <textarea name="designdescription" id="designdescription" placeholder="Design Description" oninput="countWords('designdescription', 'designdescription-word-count', 300)"></textarea>
+
+            <p class="wordlimit">max: 200 words<span id="interiorsuggestions-word-count" class="word-count"></span></p>
+            <textarea name="interiorsuggestions" id="interiorsuggestions" placeholder="Interior Suggestions" oninput="countWords('interiorsuggestions', 'interiorsuggestions-word-count', 200)"></textarea>
+
+            <p class="wordlimit">max: 100 words<span id="additionalComments-word-count" class="word-count"></span></p>
+            <textarea name="additionalComments" id="additionalComments" placeholder="Additional Comments" oninput="countWords('additionalComments', 'additionalComments-word-count', 100)"></textarea>
+
+            <p>Upload Files</p>
+
+            <div style="grid-column: span 2;margin-bottom: 10px; display: grid; gap: 16px; grid-template-columns: 1fr 1fr;">
+                <p>Type: PDF/PNG<br>
+                    Size: 5MB</p>
+                    <input type="file" id="file2D" style="display: none;" accept=".pdf, .png">
+                    <label for="file2D" class="oval-button file-label" >2D Design</label>
+
+            </div>
+            
+            <div style="grid-column: span 2; display: grid; gap: 16px; grid-template-columns: 1fr 1fr;">
+                <p>Type: OBJ<br>
+                    Size: 5MB</p>
+                    <input type="file" id="file3D" style="display: none;" accept=".obj">
+                    <label for="file3D" class="oval-button file-label" style="text-align: center;">3D Render</label>
+            </div>
+                
+            
+
+            <button type="submit" id="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function countWords(textareaId, wordCountId, limit) {
+            const textarea = document.getElementById(textareaId);
+            const wordCountSpan = document.getElementById(wordCountId);
+            const words = textarea.value.trim().split(/\s+/);
+            const currentWordCount = words.length;
+            
+            if (currentWordCount > limit) {
+                textarea.value = words.slice(0, limit).join(' ');
+            }
+
+            wordCountSpan.textContent = `(${currentWordCount}/${limit} words)`;
+        }
+    </script>
+
+</body>
+</html>
+
+
