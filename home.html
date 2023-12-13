@@ -84,7 +84,7 @@
     <header>
         <img src="your-logo.png" alt="Logo" id="logo">
         <div id="buttons">
-            <button class="pill-button">Guidelines</button>
+            <button class="pill-button" onclick="viewGuidelines()">Guidelines</button>
             <button class="pill-button "type="button" onclick="window.location.href='register.html'">Register/Login</button>
             <button class="pill-button "type="button" onclick="window.location.href='submit.html'">Submit</button>
         </div>
@@ -110,5 +110,37 @@
 
     <script src="scroll.js"></script>
 
+    
+    <div id="toast"></div>
+
+    <script>
+        function viewGuidelines() {
+            var iframe = document.createElement('iframe');
+            iframe.src = 'https://drive.google.com/file/d/1cxh5yVfX-AAN_7Lg-8RnyEM2FrNElfJP/view?usp=sharing';
+            iframe.frameBorder = '0';
+            iframe.scrolling = 'auto';
+            iframe.height = '100%';
+            iframe.width = '100%';
+    
+            // Append the iframe to the body
+            document.body.appendChild(iframe);
+    
+            // Show the toast after a short delay (you can adjust the delay as needed)
+            setTimeout(function () {
+                showViewToast();
+            }, 500);
+        }
+    
+        function showViewToast() {
+            var toast = document.getElementById('toast');
+            toast.innerText = 'Viewed';
+            toast.style.display = 'block';
+    
+            // Hide the toast after a few seconds (you can adjust the duration)
+            setTimeout(function () {
+                toast.style.display = 'none';
+            }, 3000);
+        }
+    </script>
 </body>
 </html>
