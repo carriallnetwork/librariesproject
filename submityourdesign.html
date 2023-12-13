@@ -1,69 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submit Your Designs</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-
-        h2 {
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style-type: disc;
-            padding-left: 80px;
-            text-align: left;
-        }
-
-        .pill-button {
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 25px;
-            margin-bottom: 20px;
-            cursor: pointer;
-            font-size: 18px;
-        }
-
-        .disclaimer{
-            font-style: italic;
-        }
-    </style>
-</head>
-<body>
-
-    <h2>Submit Your Designs</h2>
-
-    <button class="pill-button" onclick="window.location.href='submit.html'">Submit</button>
-
-    <div class="disclaimer">
-        You will be redirected to a different page to submit your designs
-    </div>
-    <ul>
-        <li>Submissions must be in A2 digital boards, oriented in landscape format, accompanied by a 3D render of the design</li>
-        <li>Two separate text boxes will be provided in the submission portal: one for the design description (300 words) and another for any additional information about the design</li>
-        
-    </ul>
-
-    <script>
-        function redirectToSubmitPage() {
-            window.location.href = "submit.html";
-        }
-    </script>
-
-</body>
-</html> -->
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,21 +7,23 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             padding: 20px;
         }
 
         h2 {
+            text-align: center;
             margin-bottom: 20px;
         }
 
         ul {
+            align-items: center;
             list-style-type: disc;
-            padding-left: 80px;
             text-align: left;
         }
 
         .pill-button {
+            text-align: center;
+            align-items: center;
             background-color: #4CAF50;
             color: #fff;
             border: none;
@@ -99,13 +35,23 @@
         }
 
         .disclaimer {
+            text-align: center;
             font-style: italic;
         }
 
         /* Footer Styles */
         footer {
             margin-top: 50px;
-            text-align: left;
+        }
+        footertop{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+
+        }
+        footerbottom{
+
         }
 
         footer img {
@@ -143,11 +89,12 @@
     <ul>
         <li>Submissions must be in A2 digital boards, oriented in landscape format, accompanied by a 3D render of the design</li>
         <li>Two separate text boxes will be provided in the submission portal: one for the design description (300 words) and another for any additional information about the design</li>
+        <li>The participants should submit the required documents in the submission portal, and should also send it via email to abcdxxx@gmail.com.</li>
     </ul>
 
     <footer>
-        <img src="your-logo.png" alt="Logo">
-
+        <div class="footertop">
+            <img src="your-logo.png" alt="Logo">
         <span class="write-to-us">
             Write to us:<br>
             If you have any questions,<br> 
@@ -155,6 +102,8 @@
             us. We typically respond<br> 
             within 24 hours.<br>
         </span>
+        </div>
+        
         <div class="powered-by">
             <div>
                 <img src="x-logo.png" alt="X Logo">
@@ -162,8 +111,6 @@
                 <img src="fb-logo.png" alt="FB Logo">
                 <span>Powered by PEN</span>
             </div>
-           
-            
         </div>
     </footer>
 
